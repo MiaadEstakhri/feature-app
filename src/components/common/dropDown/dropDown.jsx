@@ -9,6 +9,7 @@ const DropDown = () => {
       <div>B</div>
       <div>C</div>
       <div>D</div>
+      <div>D</div>
     </section>
   );
 };
