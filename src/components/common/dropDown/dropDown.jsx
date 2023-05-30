@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./dropDown.scss";
 
 const data = [
   { name: "ali" },
@@ -16,6 +17,7 @@ const DropDown = () => {
     <div
       className="d-flex flex-column justify-content-center align-items-center border-1 border-black"
       onClick={openClickHandle}>
+      <div></div>
       {data.map((item, key) => {
         return (
           <div key={key} className={`${isOpen ? "d-flex" : "d-none"}`}>
