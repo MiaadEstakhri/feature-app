@@ -17,7 +17,7 @@ const DropDown = () => {
   return (
     <div className="d-flex justify-content-center">
       <div
-        className={`w-100 h-100 position-absolute ${isOpen ? "open" : ""}`}
+        className={`w-100 h-100 position-absolute ${isOpen ? "closed" : ""}`}
         onClick={() => setIsOpen(false)}></div>
       <div className="col-2 position-relative">
         <div
