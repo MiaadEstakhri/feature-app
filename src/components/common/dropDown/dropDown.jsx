@@ -13,18 +13,31 @@ const DropDown = () => {
   const openClickHandle = () => {
     setIsOpen((prev) => !prev.isOpen);
   };
+
   return (
-    <div
-      className="d-flex flex-column justify-content-center align-items-center border-1 border-black"
-      onClick={openClickHandle}>
-      <div></div>
-      {data.map((item, key) => {
-        return (
-          <div key={key} className={`${isOpen ? "d-flex" : "d-none"}`}>
-            <div>{item.name}</div>
-          </div>
-        );
-      })}
+    <div className="d-flex justify-content-center">
+      <div
+        className={`w-100 h-100 position-absolute ${isOpen ? "open" : ""}`}
+        onClick={() => setIsOpen(false)}></div>
+      <div className="col-2 position-relative">
+        <div
+          className="d-flex justify-content-start align-items-center p-2 ps-3 border border-1 "
+          onClick={openClickHandle}>
+          miaad
+        </div>
+        <div className="border border-1 bg-light">
+          {isOpen &&
+            data.map((item, key) => {
+              return (
+                <ul
+                  key={key}
+                  className="list list-unstyled d-flex flex-column ">
+                  <li>{item.name}</li>
+                </ul>
+              );
+            })}
+        </div>
+      </div>
     </div>
   );
 };
